@@ -75,36 +75,38 @@ public class App {
     //todo Task 5
     public void marks() {
         // input your solution here
-        int dead=0;
+        int dead = 0;
         int z = 1;
         double counter = 0;
         int negative = 0;
-        while(dead!=1){
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Mark " + z + ": ");
-        int zahl = scanner.nextInt();
-        if (zahl < 0 || zahl > 5) {
-            System.out.println("Invalid mark!");
-        } else if (zahl >= 1 && zahl <= 4) {
-            counter = counter + zahl;
-            z++;
-            System.out.println();
-        } else if (zahl == 5) {
-            counter = counter + 5;
-            negative++;
-            z++;
-            System.out.println();
-        }
-        else if (zahl == 0) {
-            double average;
-            average = counter / 2;
-            System.out.printf("Average: " + "%.2f", average);
-            System.out.println();
-            System.out.println("Negative marks: " + negative);
-            dead++;
-        }
+        while (dead != 1) {
+            Scanner scanner = new Scanner(System.in);
+            System.out.print("Mark " + z + ": ");
+            int zahl = scanner.nextInt();
+            if (zahl < 0 || zahl > 5) {
+                System.out.println("Invalid mark!");
+            } else if (zahl >= 1 && zahl <= 4) {
+                counter = counter + zahl;
+                z++;
+            } else if (zahl == 5) {
+                counter = counter + 5;
+                negative++;
+                z++;
+            }
+            if (zahl == 0 && z<=1){
+                System.out.println("Average: 0.00");
+                System.out.println("Negative marks: 0");
+                break;
+            } else if (zahl == 0) {
+                double average;
+                average = counter / (z - 1);
+                System.out.printf("Average: " + "%.2f\n", average);
+                System.out.println("Negative marks: " + negative);
+                dead++;
+            }
         }
     }
+
 
 
 
