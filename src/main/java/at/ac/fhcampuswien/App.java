@@ -75,7 +75,7 @@ public class App {
     //todo Task 5
     public void marks() {
         // input your solution here
-        Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in); // Scanner nicht in loop
         int dead = 0;
         int z = 1;
         double counter = 0;
