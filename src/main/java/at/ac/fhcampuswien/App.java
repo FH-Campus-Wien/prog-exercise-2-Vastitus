@@ -102,7 +102,7 @@ public class App {
                 double average;
                 average = counter / (z - 1);
                 System.out.printf("Average: " + String.format("%.2f", average)+System.lineSeparator());
-                System.out.print("Negative marks: " + negative+"\n");
+                System.out.print("Negative marks: " + negative+System.lineSeparator());
                 dead++;
             }
         }
